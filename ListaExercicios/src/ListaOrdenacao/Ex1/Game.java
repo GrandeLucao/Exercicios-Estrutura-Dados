@@ -23,21 +23,39 @@ public class Game {
                     "3 - Ordernar por Cooldown.\n"+
                     "4 - Ordenar por DPS.\n";
 
+        String line2="Por qual tipo? \n"+
+                    "1 - Bubble sort.\n"+
+                    "2- Selection Sort.\n"+
+                    "3 - Quick Sort.\n"+
+                    "4 - Merge Sort.\n";
+
         System.out.println(line);
         int choice=input.nextInt();
 
-        switch(choice){
+        if(choice==1){
+            System.out.println(listaItem.ordenarPorNome());
+            System.exit(1);
+        }
+        
+        System.out.println(line2);
+        int choice2=input.nextInt();
+
+        switch(choice2){
             case 1:
-                System.out.println(listaItem.ordenarPorNome());
+                listaItem.BubbleSort(listaItem.getListaItens(), choice);
+                System.out.println(listaItem.getListaItens());
                 break;
             case 2:
-                System.out.println(listaItem.ordenarPorDano());
+                listaItem.SelectionSort(listaItem.getListaItens(), choice);
+                System.out.println(listaItem.getListaItens());
                 break;
             case 3:
-                System.out.println(listaItem.ordenarPorColl());
+                listaItem.QuickSort(listaItem.getListaItens(), choice,0,(listaItem.getSize()-1));
+                System.out.println(listaItem.getListaItens());
                 break;
             case 4:
-                System.out.println(listaItem.ordenarPorDPS());
+                listaItem.Sort(listaItem.getListaItens(), 0, listaItem.getSize()-1, choice);
+                System.out.println(listaItem.getListaItens());
                 break;
             default:
                 System.out.println("Comando invalido.");

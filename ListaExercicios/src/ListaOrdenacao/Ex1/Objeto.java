@@ -42,27 +42,6 @@ public class Objeto {
     }
 }
 
-class ComparatorPorCooldown implements Comparator<Objeto>{
-    @Override
-    public int compare(Objeto ob1, Objeto ob2){
-        return Double.compare(ob1.getColldown(), ob2.getColldown());
-    }
-}
-
-class ComparatorPorDano implements Comparator<Objeto>{
-    @Override
-    public int compare(Objeto ob1, Objeto ob2){
-         return Double.compare(ob1.getDmg(), ob2.getDmg());
-    }
-}
-
-class ComparatorPorDPS implements Comparator<Objeto>{
-    @Override
-    public int compare(Objeto ob1, Objeto ob2){
-        return Double.compare(ob1.getDPS(), ob2.getDPS());
-    }
-}
-
 class ComparatorPorNome implements Comparator<Objeto>{
     @Override
     public int compare(Objeto ob1, Objeto ob2){

@@ -25,7 +25,7 @@ public class Dictionary {
         binTree.addChildToParent("Consumiveis","Fruta","Sacia a fome, evitando a perda de pontos de vida.");
         binTree.addChildToParent("Consumiveis","Agua","Sacia a sede, evitanto a perda de pontos de vida.");
 
-        binTree.inOrderTraversal(binTree.root);
+        binTree.inOrderTraversal(binTree.root.getChild(1));
 
     }
 }

@@ -26,9 +26,7 @@ class BinaryTree {
 
     public void inOrderTraversal(StringTreeNode node) {
         if(node!=null){
-            inOrderTraversal(node.left);
             System.out.print(node.name +" "+node.desc+" \n ");
-            inOrderTraversal(node.right);
         }
     }
 
